@@ -1,7 +1,7 @@
 # Shell Reconstruction
 This repository provides the source code, trained model and instructions for using shell reconstruction.
 
-Shell reconstruction is a novel method for 3D shape reconstruction which models the object geometry as a pair of depth images, composing the "shell" of the object. This unique representation allows using image-to-image residual ConvNet architectures for 3D reconstruction, generates object reconstruction directly in the camera frame, and generalizes well to novel object types. Moreover, an object shell can be converted into an object mesh in a fraction of a second, providing time and memory efficient alternative to voxel or implicit representations. Please visit our [arxiv paper](https://arxiv.org/abs/2109.06837) for more details.
+Shell reconstruction is a novel method for 3D shape reconstruction which models the object geometry as a pair of depth images, composing the "shell" of the object. This unique representation allows using image-to-image residual ConvNet architectures for 3D reconstruction, generates object reconstruction directly in the camera frame, and generalizes well to novel object types. Moreover, an object shell can be converted into an object mesh in a fraction of a second, providing time and memory efficient alternative to voxel or implicit representations. Please visit our [arxiv paper](https://arxiv.org/abs/2109.06837v1) for more details.
 
 
 ![](images/approach_overview.png)
@@ -11,8 +11,8 @@ Shell reconstruction is a novel method for 3D shape reconstruction which models 
 - Clone the repository
 - Setup python environment as following
 ```
-python3.6 -m venv env
-source env/bin/activate
+conda create --prefix ./pyvenv python=3.9
+conda activate ./pyvenv
 pip install --upgrade pip
 pip install -r requirements.txt
 ```

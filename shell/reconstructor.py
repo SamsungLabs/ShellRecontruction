@@ -121,9 +121,9 @@ class ShellReconstructor:
         masked_depth[depth <= 0] = 0
 
         # select all pixels of idx and compute mean x-value
-        mean_x = np.mean(np.where(masked_depth > 0)[1]).astype(np.int)
+        mean_x = np.mean(np.where(masked_depth > 0)[1]).astype(np.int32)
         # adjust mean x-value based on boundaries
-        depth_crop_hw = np.ceil(self.depth_crop_width / 2).astype(np.int)
+        depth_crop_hw = np.ceil(self.depth_crop_width / 2).astype(np.int32)
         mean_x = np.clip(mean_x, depth_crop_hw, masked_depth.shape[1] - depth_crop_hw)
         # crop a 480 x 480 window of the depth image
         crop_depth = masked_depth[:, mean_x - depth_crop_hw : mean_x + depth_crop_hw]
