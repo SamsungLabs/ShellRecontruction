@@ -1,0 +1,16 @@
+torch
+numpy
+pyvista
+open3d
+tqdm
+trimesh
+numpy-indexed
+scipy
+transformations
+
+# saicny core stuff
+# --extra-index-url http://10.10.20.41/packages/ --trusted-host 10.10.20.41
+# srl-core
+# srl-mqtt
+# srl-zmq
+# srl-service
