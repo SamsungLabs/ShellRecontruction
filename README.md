@@ -33,46 +33,9 @@ python demo.py
 ```
 This file will generate reconstructions in `demo_data/reconstruction` folder (we also provide expected output in [demo_data/reconstruction_expected](demo_data/reconstruction_expected) folder). 
 
-## GAIC MQTT Compatability Demo
-[run_shell_mqtt_service.py](run_shell_mqtt_service.py) implements shell reconstruction as mqtt service in GAIC compliant way.
-[demo_shell_mqtt_service.py](demo_shell_mqtt_service.py) demonstrates using this service.
-For demo:
-- Install mqtt libraries:
-  ```bash
-  sudo apt install libmosquitto-dev
-  sudo apt install mosquitto
-  ```
-- Install srl libraries inside the python environment
-  ```bash
-  pip install srl.core srl.mqtt srl.service srl.zmq --extra-index-url https://art.sec.samsung.net/artifactory/saic-ny_pypi/ --trusted-host art.sec.samsung.net --upgrade
-  ```
-- Run mqtt broker listening at port `5678`:
-  ```bash
-  mosquitto -p 5678
-  ```
-- In separate terminal session, run shell mqtt service (replace `<broker_ip_addr>` with the ip address of the broker):
-  ```bash
-  python run_shell_mqtt_service.py \
-    --broker_address <broker_ip_addr> \
-    --broker_port 5678 \
-    --shell_reconstruction_reqres_topic_name shell_recon_reqres_topic
-  ```
-- In separate terminal session, run the demo script:
-  ```bash
-  python demo_shell_mqtt_service.py \
-    --broker_address <broker_ip_addr> \
-    --broker_port 5678 \
-    --shell_reconstruction_reqres_topic_name shell_recon_reqres_topic
-  ```
-- Once done, shell reconstruction results for [demo_data/real_data.pkl](demo_data/real_data.pkl) can be found inside the `demo_data/reconstruction_gaic_mqtt` folder.
-
 ## ROS2 Node:
-For running shell-reconstruction as a ROS2 node, please have a look at [shell-reconstruction-ros repository](https://gitlab.saicny.com/submagr/shell-reconstruction-ros).
-## Dataset Generation
-Coming soon.
+For running shell-reconstruction as a ROS2 node, please have a look at [shell-reconstruction-ros repository](https://github.com/submagr/shell-reconstruction-ros).
 
-## Training
-Coming soon.
 
 ## Citation
 ```
