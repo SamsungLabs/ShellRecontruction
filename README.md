@@ -1,7 +1,7 @@
 # Shell Reconstruction
 This repository provides the source code, trained model and instructions for using shell reconstruction.
 
-Shell reconstruction is a novel method for 3D shape reconstruction which models the object geometry as a pair of depth images, composing the "shell" of the object. This unique representation allows using image-to-image residual ConvNet architectures for 3D reconstruction, generates object reconstruction directly in the camera frame, and generalizes well to novel object types. Moreover, an object shell can be converted into an object mesh in a fraction of a second, providing time and memory efficient alternative to voxel or implicit representations. Please visit our [arxiv paper](https://arxiv.org/abs/2109.06837v1) for more details.
+Shell reconstruction is a novel method for 3D shape reconstruction which models the object geometry as a pair of depth images, composing the "shell" of the object. This unique representation allows using image-to-image residual ConvNet architectures for 3D reconstruction, generates object reconstruction directly in the camera frame, and generalizes well to novel object types. Moreover, an object shell can be converted into an object mesh in a fraction of a second, providing time and memory efficient alternative to voxel or implicit representations. Please visit our [arxiv paper](https://arxiv.org/abs/2109.06837v2) for more details.
 
 
 ![](images/approach_overview.png)
@@ -39,11 +39,11 @@ For running shell-reconstruction as a ROS2 node, please have a look at [shell-re
 
 ## Citation
 ```
-@article{chavan2021object,
-  title={Object Shell Reconstruction: Camera-centric Object Representation for Robotic Grasping},
+@article{chavan2021shellgrasp,
+  title={Simultaneous Object Reconstruction and Grasp Prediction using a Camera-centric Object Shell Representation},
   author={Chavan-Dafle, Nikhil and Popovych, Sergiy and Agrawal, Shubham and Lee, Daniel D and Isler, Volkan},
   journal={arXiv preprint arXiv:2109.06837},
-  year={2021}
+  year={2022}
 }
 ```
 
